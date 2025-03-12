@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sicurezza Stradale</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .chart-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sicurezza Stradale</h1>
+        <p>La sicurezza stradale è fondamentale per prevenire incidenti e garantire l'incolumità di tutti gli utenti della strada.</p>
+        
+        <h2>I Pericoli di Alcol e Droghe alla Guida</h2>
+        <p>Guidare sotto l'effetto di alcol o droghe riduce drasticamente la capacità di reazione e aumenta il rischio di incidenti gravi.</p>
+        <ul>
+            <li>L'alcol compromette i riflessi e la coordinazione.</li>
+            <li>Le droghe possono alterare la percezione della realtà.</li>
+            <li>Aumenta il rischio di incidenti mortali.</li>
+        </ul>
+        
+        <h2>Statistiche sulla Sicurezza Stradale</h2>
+        <div class="chart-container">
+            <canvas id="mortiStradaChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="arrestiMulteChart"></canvas>
+        </div>
+        
+        <h2>Risorse Utili</h2>
+        <p>Per approfondire il tema della sicurezza stradale, visita i seguenti siti:</p>
+        <ul>
+            <li><a href="https://www.poliziadistato.it/" target="_blank">Polizia di Stato</a></li>
+            <li><a href="https://www.aci.it/" target="_blank">Automobile Club d'Italia (ACI)</a></li>
+            <li><a href="https://www.sicurezzastradale.it/" target="_blank">Sicurezza Stradale</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const ctx1 = document.getElementById('mortiStradaChart').getContext('2d');
+        new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['2018', '2019', '2020', '2021', '2022'],
+                datasets: [{
+                    label: 'Numero di morti sulla strada',
+                    data: [3200, 3100, 2800, 2900, 3000],
+                    backgroundColor: 'rgba(255, 99, 132, 0.6)'
+                }]
+            }
+        });
+
+        const ctx2 = document.getElementById('arrestiMulteChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'line',
+            data: {
+                labels: ['2018', '2019', '2020', '2021', '2022'],
+                datasets: [{
+                    label: 'Arresti e multe per guida pericolosa',
+                    data: [15000, 14000, 13000, 13500, 14500],
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    fill: false
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
 
