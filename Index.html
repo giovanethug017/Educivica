@@ -46,65 +46,63 @@
             color: #002b5c;
         }
 
-        .center-text {
+        .center-all {
             text-align: center;
         }
 
-        /* Centra l'elenco e i punti elenco */
-        .center-text ul {
-            list-style-position: inside; /* Punti elenco all'interno del contenuto */
-            padding-left: 0; /* Rimuove il padding a sinistra */
-            text-align: center; /* Centra il testo dell'elenco */
+        .center-all ul {
+            list-style-position: inside;
+            padding-left: 0;
+            text-align: center;
         }
 
-        .center-text li {
-            display: inline-block; /* Gli <li> sono trattati come blocchi in linea */
-            margin: 0 10px; /* Aggiunge spazio tra i punti elenco */
+        .center-all li {
+            display: inline-block;
+            margin: 0 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Sicurezza Stradale</h1>
-        <p>La sicurezza stradale è un aspetto fondamentale per la tutela di pedoni, ciclisti, motociclisti e automobilisti. Seguire le regole della strada e adottare comportamenti responsabili può prevenire incidenti e salvare vite umane.</p>
+        <h1 class="center-all">Sicurezza Stradale</h1>
+        <p class="center-all">La sicurezza stradale è un aspetto fondamentale per la tutela di pedoni, ciclisti, motociclisti e automobilisti. Seguire le regole della strada e adottare comportamenti responsabili può prevenire incidenti e salvare vite umane.</p>
         
-        <h2 class="center-text">I Pericoli di Alcol e Droghe alla Guida</h2>
-        <p>Guidare sotto l'effetto di alcol o droghe è estremamente pericoloso e rappresenta una delle principali cause di incidenti stradali. Queste sostanze alterano le capacità cognitive, riducono i riflessi e compromettono la percezione del pericolo, aumentando drasticamente il rischio di causare o subire un incidente.</p>
+        <h2 class="center-all">I Pericoli di Alcol e Droghe alla Guida</h2>
+        <p class="center-all">Guidare sotto l'effetto di alcol o droghe è estremamente pericoloso e rappresenta una delle principali cause di incidenti stradali. Queste sostanze alterano le capacità cognitive, riducono i riflessi e compromettono la percezione del pericolo, aumentando drasticamente il rischio di causare o subire un incidente.</p>
         
-        <h3>Effetti dell'Alcol sulla Guida</h3>
-        <ul>
+        <h3 class="center-all">Effetti dell'Alcol sulla Guida</h3>
+        <ul class="center-all">
             <li><strong>Riduzione dei riflessi:</strong> L'alcol rallenta il tempo di reazione, rendendo più difficile evitare ostacoli improvvisi o frenare in tempo.</li>
             <li><strong>Compromissione della coordinazione:</strong> Movimenti meno precisi possono causare difficoltà nel mantenere la traiettoria del veicolo.</li>
             <li><strong>Alterazione della percezione:</strong> L’alcol può distorcere la percezione della velocità e delle distanze, aumentando il rischio di collisioni.</li>
             <li><strong>Falsa sicurezza:</strong> L’assunzione di alcol porta a sottovalutare i pericoli e ad assumere comportamenti rischiosi, come l’eccesso di velocità.</li>
         </ul>
 
-        <h3>Effetti delle Droghe sulla Guida</h3>
-        <ul>
+        <h3 class="center-all">Effetti delle Droghe sulla Guida</h3>
+        <ul class="center-all">
             <li><strong>Diminuzione dell'attenzione:</strong> Alcune droghe riducono la concentrazione e la capacità di mantenere l’attenzione sulla strada.</li>
             <li><strong>Allucinazioni e perdita di controllo:</strong> Sostanze psicotrope come LSD o cannabis possono alterare la percezione della realtà, causando reazioni imprevedibili alla guida.</li>
             <li><strong>Sonno improvviso e affaticamento:</strong> Alcuni stupefacenti, come gli oppiacei, possono causare stati di sonnolenza improvvisa, aumentando il rischio di perdere il controllo del veicolo.</li>
             <li><strong>Aumento dell'aggressività:</strong> Droghe stimolanti come la cocaina o le anfetamine possono indurre comportamenti spericolati, come il mancato rispetto delle regole stradali.</li>
         </ul>
 
-        <h3>Conseguenze Legali</h3>
-        <p>In Italia, guidare sotto l'effetto di alcol o droghe è un reato punito severamente:</p>
-        <ul>
+        <h3 class="center-all">Conseguenze Legali</h3>
+        <p class="center-all">In Italia, guidare sotto l'effetto di alcol o droghe è un reato punito severamente:</p>
+        <ul class="center-all">
             <li>Superare il limite di alcolemia di 0,5 g/l può comportare una multa fino a 6.000€, la sospensione della patente e, nei casi più gravi, l'arresto.</li>
             <li>La guida in stato di alterazione da sostanze stupefacenti può portare alla revoca della patente e a pene detentive.</li>
             <li>In caso di incidente, le sanzioni sono ancora più severe e possono includere il carcere per omicidio stradale.</li>
         </ul>
-        
     </div>
-    <h2 class="center-text">Statistiche sulla Sicurezza Stradale</h2>
+    <h2 class="center-all">Statistiche sulla Sicurezza Stradale</h2>
     <div class="chart-container">
         <canvas id="graficoMorti"></canvas>
     </div>
     <div class="chart-container">
         <canvas id="graficoArrestiMulte"></canvas>
     </div>
-    <h2 class="center-text">Risorse Utili</h2>
-    <div class="center-text">
+    <h2 class="center-all">Risorse Utili</h2>
+    <div class="center-all">
         <ul>
             <li><a href="https://www.poliziadistato.it/" target="_blank">Polizia di Stato</a></li>
             <li><a href="https://www.aci.it/" target="_blank">Automobile Club d'Italia (ACI)</a></li>
@@ -134,6 +132,14 @@
         new Chart(ctxGraficoArrestiMulte, {
             type: 'line',
             data: {
-                labels: ['2018', '2019', '2020
-
-
+                labels: ['2018', '2019', '2020', '2021', '2022'],
+                datasets: [{
+                    label: 'Arresti e multe per guida pericolosa',
+                    data: [15000, 14000, 13000, 13500, 14500],
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
