@@ -49,6 +49,18 @@
         .center-text {
             text-align: center;
         }
+
+        /* Centra l'elenco e i punti elenco */
+        .center-text ul {
+            list-style-position: inside; /* Punti elenco all'interno del contenuto */
+            padding-left: 0; /* Rimuove il padding a sinistra */
+            text-align: center; /* Centra il testo dell'elenco */
+        }
+
+        .center-text li {
+            display: inline-block; /* Gli <li> sono trattati come blocchi in linea */
+            margin: 0 10px; /* Aggiunge spazio tra i punti elenco */
+        }
     </style>
 </head>
 <body>
@@ -122,16 +134,6 @@
         new Chart(ctxGraficoArrestiMulte, {
             type: 'line',
             data: {
-                labels: ['2018', '2019', '2020', '2021', '2022'],
-                datasets: [{
-                    label: 'Arresti e multe per guida pericolosa',
-                    data: [15000, 14000, 13000, 13500, 14500],
-                    borderColor: 'rgba(54, 162, 235, 1)',
-                }]
-            }
-        });
-    </script>
-</body>
-</html>
+                labels: ['2018', '2019', '2020
 
 
