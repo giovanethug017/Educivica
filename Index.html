@@ -45,6 +45,10 @@
             font-size: 14px;
             color: #002b5c;
         }
+
+        .center-text {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -52,7 +56,7 @@
         <h1>Sicurezza Stradale</h1>
         <p>La sicurezza stradale è un aspetto fondamentale per la tutela di pedoni, ciclisti, motociclisti e automobilisti. Seguire le regole della strada e adottare comportamenti responsabili può prevenire incidenti e salvare vite umane.</p>
         
-        <h2>I Pericoli di Alcol e Droghe alla Guida</h2>
+        <h2 class="center-text">I Pericoli di Alcol e Droghe alla Guida</h2>
         <p>Guidare sotto l'effetto di alcol o droghe è estremamente pericoloso e rappresenta una delle principali cause di incidenti stradali. Queste sostanze alterano le capacità cognitive, riducono i riflessi e compromettono la percezione del pericolo, aumentando drasticamente il rischio di causare o subire un incidente.</p>
         
         <h3>Effetti dell'Alcol sulla Guida</h3>
@@ -80,16 +84,14 @@
         </ul>
         
     </div>
-<center>
-    <h2>Statistiche sulla Sicurezza Stradale</h2></center>
+    <h2 class="center-text">Statistiche sulla Sicurezza Stradale</h2>
     <div class="chart-container">
         <canvas id="graficoMorti"></canvas>
     </div>
     <div class="chart-container">
         <canvas id="graficoArrestiMulte"></canvas>
     </div>
-    <center>    
-    <h2>Risorse Utili</h2></center>
+    <h2 class="center-text">Risorse Utili</h2>
     <ul>
         <li><a href="https://www.poliziadistato.it/" target="_blank">Polizia di Stato</a></li>
         <li><a href="https://www.aci.it/" target="_blank">Automobile Club d'Italia (ACI)</a></li>
@@ -123,10 +125,10 @@
                     label: 'Arresti e multe per guida pericolosa',
                     data: [15000, 14000, 13000, 13500, 14500],
                     borderColor: 'rgba(54, 162, 235, 1)',
-                   
                 }]
             }
         });
     </script>
 </body>
 </html>
+
